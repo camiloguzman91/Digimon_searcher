@@ -1,15 +1,8 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React  from 'react';
 import Search from './Search';
 import './styles/Header.css';
 
-const Header = () => {
-
-  const [search, setSearch] = useState('');
-  const searchInput = useRef(null);
-
-  const handleSearch = useCallback(() => {
-    setSearch(searchInput.current.value);
-  }, [])
+const Header = ({search, searchInput, handleSearch}) => {
 
   return (
     <div className="Header">
@@ -18,8 +11,9 @@ const Header = () => {
         <p>Buscar: </p>
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
       </div>
+      
     </div>
   );
-};
+}
 
 export default Header;

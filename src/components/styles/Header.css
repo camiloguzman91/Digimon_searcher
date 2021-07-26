@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 10%;
+  border-bottom: 3px solid rgb(22, 41, 105);
+  padding-bottom: 20px;
 }
 
 .Header > img {
