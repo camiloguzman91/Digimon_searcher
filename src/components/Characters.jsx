@@ -3,9 +3,8 @@ import React from 'react';
 import './styles/Characters.css';
 
 const Characters = (props) => {
-
-  return (
-    <div className="characters">
+    return (
+      <div className="characters">
       <h1>Monsters list</h1>
       <div className="characters__container">
         {props.filteredUsers.map(digimon => (
