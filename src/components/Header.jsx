@@ -8,7 +8,7 @@ const Header = ({search, searchInput, handleSearch}) => {
     <div className="Header">
       <img src="https://i.imgur.com/3iS19rK.png" alt="Digimon" />
       <div className="search_container">
-        <p>Buscar: </p>
+        <p>Search: </p>
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
       </div>
       

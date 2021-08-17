@@ -18,10 +18,6 @@ const App = () => {
   
     const filteredUsers = useMemo(() =>
       characters.filter((user) => {
-        /*for(var i = 0; i < characters.length; i++) {
-          if(characters.length > 4) 
-          console.log(characters[i]);
-        }*/
         while (characters.length < 0) {
           console.log(characters[5])
         }
@@ -34,6 +30,7 @@ const App = () => {
     <div className="App">
       <Header search={search} searchInput={searchInput} handleSearch={handleSearch} />
       <Characters filteredUsers={filteredUsers} />
+      <button type="button">Load more</button>
     </div>
   );
 }
