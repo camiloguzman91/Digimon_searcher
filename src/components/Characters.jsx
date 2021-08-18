@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './styles/Characters.css';
 
 const Characters = (props) => {
+
+  const [visible, setVisible] = useState(4);
+
+  const ShowMoreDigimon = () => {
+    setVisible((prevValue) => prevValue + 4);
+  }
   
   const digiFilter = props.filteredUsers.map(digimon => (
     <div className="item" key={digimon.name}>
@@ -13,13 +19,16 @@ const Characters = (props) => {
   ));
 
   return (
-    <div className="characters">
-    <h1>Monsters list</h1>
-    <h2>Number of characters found: {digiFilter.length} monsters</h2>
-      <div className="characters__container">
-        {digiFilter.slice(0, 4)}
+    <>
+      <div className="characters">
+      <h1>Monsters list</h1>
+      <h2>Number of characters found: {digiFilter.length} monsters</h2>
+        <div className="characters__container">
+          {digiFilter.slice(0, visible)}
+        </div>
       </div>
-    </div>
+      <button onClick={ShowMoreDigimon} type="button">Load more</button>
+    </>
   );
 };
 

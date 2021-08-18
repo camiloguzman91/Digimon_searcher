@@ -30,7 +30,7 @@ const App = () => {
     <div className="App">
       <Header search={search} searchInput={searchInput} handleSearch={handleSearch} />
       <Characters filteredUsers={filteredUsers} />
-      <button type="button">Load more</button>
+      
     </div>
   );
 }
