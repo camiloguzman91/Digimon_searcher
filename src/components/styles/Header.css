@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+p {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 658px) {
   .Header {
     flex-direction: column;

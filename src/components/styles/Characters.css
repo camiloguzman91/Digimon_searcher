@@ -15,6 +15,17 @@
   border-radius: 50%;
 }
 
+.digiName {
+  color: rgb(39, 115, 170);
+}
+
+.numChar {
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 0 5px;
+  color: rgb(255, 153, 25);
+}
+
 .item > h3 {
   color: rgb(255, 153, 25);
 }

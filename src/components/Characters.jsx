@@ -12,7 +12,7 @@ const Characters = (props) => {
   
   const digiFilter = props.filteredUsers.map(digimon => (
     <div className="item" key={digimon.name}>
-      <h2>{digimon.name}</h2>
+      <h2 className="digiName">{digimon.name}</h2>
       <h3>{digimon.level}</h3>
       <img src={digimon.img} alt={digimon.name} />
     </div>
@@ -22,7 +22,7 @@ const Characters = (props) => {
     <>
       <div className="characters">
       <h1>Monsters list</h1>
-      <h2>Number of characters found: {digiFilter.length} monsters</h2>
+      <h2>Number of characters found: <span className="numChar">{digiFilter.length}</span> monsters</h2>
         <div className="characters__container">
           {digiFilter.slice(0, visible)}
         </div>
